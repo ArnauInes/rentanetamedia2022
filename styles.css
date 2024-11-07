@@ -1,0 +1,352 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, h4, p {
+  margin: 10px;
+}
+
+h2, h3, h4 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1px;
+  background: #fff;
+  opacity: 0.9;
+  margin-right: 20px;
+  font-family: 'Roboto', sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#features {
+  top: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 55px;
+  width: auto;
+  transition: max-height 0.5s;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 4px; /* Reduce el padding para hacer las filas más estrechas */
+  text-align: left;
+  font-size: 12px;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: center;
+}
+
+th:nth-child(1), td:nth-child(1) {
+  width: 30%; /* Ajusta el ancho */
+  text-align: left;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 15%; /* Ajusta el ancho */
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 15%; /* Ajusta el ancho */
+}
+
+th:nth-child(4), td:nth-child(4) {
+  width: 20%; /* Ajusta el ancho */
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td.dif-value {
+  text-align: center;
+}
+
+.dif-value.positive {
+  color: green;
+}
+
+.dif-value.negative {
+  color: red;
+}
+
+.dif-value.default {
+  color: grey;
+}
+
+#search-container {
+  position: absolute;
+  top: 10px;
+  width: 400px;
+  height: 40px;
+  z-index: 1;
+  right: 5px;
+}
+
+#filter-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  opacity: 0.9;
+}
+
+/* Clases CSS para colores y negrita */
+.fo-text { color: #4c0c10; }
+.psoe-text { color: #e01319; }
+.pumj-text { color: #f9c494; }
+.alm-text { color: #f69408; }
+.pp-text { color: #1f56a2; }
+.vox-text { color: #3fc217; }
+.pacma-text { color: #47d751; }
+.lb-text { color: #041537; }
+.recortes-cero-text { color: #154f00; }
+.sumar-andalucia-text { color: #f20d58; }
+.adelante-andalucia-text { color: #43c97d; }
+.caminando-juntos-text { color: #0f3371; }
+.escanos-en-blanco-text { color: #bf813b; }
+.pcte-text { color: #820605; }
+.sumar-text { color: #f20d58; }
+.jxg-text { color: #fdfd03; }
+.xh-text { color: #3691f2; }
+.jm-text { color: #c0a831; }
+.cj-text { color: #103271; }
+.fe-jons-text { color: #666634; }
+.fia-text { color: #95465a; }
+.sumar-aragon-text { color: #f20d58; }
+.existe-text { color: #297d51; }
+.par-text { color: #f5a00c; }
+.existe-teruel-text { color: #297d51; }
+.puede-text { color: #b5bb02; }
+.asturias-existe-ev-text { color: #729ab4; }
+.psib-psoe-text { color: #e01319; }
+.mes-per-mallorca-mes-per-menorca-sumar-text { color: #f20d58; }
+.cca-text { color: #fcec75; }
+.nc-bc-text { color: #82c03c; }
+.sumar-canarias-text { color: #f20d58; }
+.ahora-canarias-pcpc-text { color: #278101; }
+.xav-text { color: #fad703; }
+.vb-text { color: #8e684d; }
+.ev-pcas-tc-text { color: #863c96; }
+.espana-vaciada-text { color: #d43600; }
+.prepal-text { color: #b450a0; }
+.upl-text { color: #b91969; }
+.vp-text { color: #6767af; }
+.gitv-text { color: #f7a303; }
+.trese-text { color: #6fd069; }
+.sy-text { color: #b09381; }
+.udca-text { color: #72ddff; }
+.fuerza-civica-text { color: #f8ba07; }
+.zsi-text { color: #f68a98; }
+.psc-text { color: #e01319; }
+.erc-text { color: #ffca1b; }
+.sumar-ecp-text { color: #f20d58; }
+.cup-pr-text { color: #e0c905; }
+.pctc-text { color: #820605; }
+.pdecat-e-ciu-text { color: #e2b005; }
+.jxcat-junts-text { color: #43c0af; }
+.escons-en-blanc-text { color: #bf813b; }
+.evc-text { color: #fce3d6; }
+.unidos-si-text { color: #951f59; }
+.bqex-text { color: #224d47; }
+.somos-cc-text { color: #05210b; }
+.psdeg-psoe-text { color: #e01319; }
+.bng-text { color: #76b2e1; }
+.pctg-text { color: #820605; }
+.ccd-text { color: #bff88d; }
+.ph-text { color: #f8b483; }
+.eh-bildu-text { color: #b2c30f; }
+.psn-psoe-text { color: #e01319; }
+.gbai-text { color: #f5837a; }
+.upn-text { color: #0d057c; }
+.eaj-pnv-text { color: #2c8559; }
+.pse-ee-psoe-text { color: #e01319; }
+.pcte-elak-text { color: #820605; }
+.rds-text { color: #9a6600; }
+.por-mi-region-text { color: #b40022; }
+.partido-autonomos-text { color: #e3efd9; }
+.sumar-compromis-text { color: #f20d58; }
+.evb-text { color: #44c2d4; }
+.cpm-text { color: #6d9697; }
+
+.bold-text {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.larger-font {
+  font-size: 120%;
+}
+
+.shorter-font {
+  font-size: 80%;
+}
+
+.participacio-text {
+  color: #808080;
+  font-size: 12px;
+}
+
+.legend-circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.mapboxgl-popup-content {
+  min-width: 350px; /* Ajustar según el ancho deseado */
+}
+
+.mapboxgl-ctrl-top-left {
+  top: 50px !important;
+  margin-right: 5px;
+}
+
+.custom-geocoder .mapboxgl-ctrl-geocoder {
+  width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .mapboxgl-ctrl-geocoder input {
+    width: 300px;
+    font-size: 12px;
+  }
+  
+  .map-overlay {
+    right: 1px;
+    max-width: 170px;
+  }
+  
+  #pd {
+    padding: 5px;
+    font-size: 12px;
+    max-width: 170px;
+  }
+  
+  #features {
+    top: 0;
+    max-height: 120px;
+    overflow-y: auto;
+    margin-top: 65px;
+    width: 170px;
+    transition: max-height 0.5s;
+  }
+  
+  #search-container {
+    width: 40%;
+    height: 40px;
+    top: 10px;
+  }
+  
+  #filter-container {
+    top: 10px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    width: 50%;
+    height: 40px;
+    font-size: 12px;
+    display: none;
+  }
+  
+  h2 {
+    font-size: 12px;
+    margin: 5px;
+  }
+  
+  h3 {
+    font-size: 10px;
+    margin: 3px;
+  }
+  
+  p {
+    font-size: 8px;
+    margin: 1px;
+  }
+  
+  h4 {
+    font-size: 7px;
+    margin: 3px;
+  }
+  
+  .participacio-text {
+    font-size: 6px;
+  }
+
+  .info-container {
+    text-align: right;
+  }
+
+  .mapboxgl-popup-content {
+    min-width: auto;
+    max-width: 90%;
+    font-size: 12px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    font-size: 8px;
+    padding: 5px;
+  }
+
+  .legend-circle {
+    width: 8px;
+    height: 8px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 4px; /* Reduce el padding para hacer las filas más estrechas */
+    text-align: center;
+    font-size: 8px;
+  }
+}
