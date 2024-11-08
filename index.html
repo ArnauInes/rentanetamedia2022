@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Resultados de las elecciones del 23J, calle a calle</title>
+  <title>El mapa de la renta de los españoles, calle a calle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css'/>
   <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
@@ -10,23 +10,18 @@
 </head>
 <body>
   <div id="map"></div>
-  <div id="filter-container">
-    <label for="party-filter">Filtra por los partidos más votados:</label>
-    <select id="party-filter">
-      <option value="all">Todos los partidos</option>
-      <option value="PP">PP</option>
-      <option value="PSOE">PSOE</option>
-      <option value="VOX">VOX</option>
-      <option value="SUMAR">SUMAR</option>
-      <option value="ERC">ERC</option>
-      <option value="JxCAT-JUNTS">JxCAT-JUNTS</option>
-      <option value="EH-Bildu">EH-Bildu</option>
-      <option value="EAJ-PNV">EAJ-PNV</option>
-      <option value="B.N.G.">B.N.G.</option>
-      <option value="CCa">CCa</option>
-      <option value="U.P.N.">U.P.N.</option>
-    </select>
+  <div id="info-box" class="info-box">
+    <h2>
+      <img src="income.png" alt="Income icon" class="info-icon">
+      El mapa de la renta de los españoles, calle a calle
+    </h2>
+    <hr>
+    <p>Haz click o pulsa sobre una zona del mapa para conocer los datos. También puedes buscar una dirección y hacer clic sobre el marcador.</p>
+    <hr>
+    <p>Mapa elaborado por Arnau Inés <a href="https://twitter.com/Suarsen" target="_blank">(@Suarsen)</a> con los datos del INE</p>
   </div>
+  
+
   <div id="search-container" class="mapboxgl-ctrl"></div>
   <div class="map-overlay" id="legend"></div>
   <script src="config.js"></script>
