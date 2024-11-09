@@ -141,6 +141,14 @@ geocoder.on('result', function (e) {
   }
 });
 
+// Detect focus on the search box input and hide the info box
+document.addEventListener('DOMContentLoaded', () => {
+  const searchBox = document.querySelector('.mapboxgl-ctrl-geocoder input');
+  if (searchBox) {
+    searchBox.addEventListener('focus', hideInfoBox);
+  }
+});
+
 map.on('load', () => {
   updateMapFilter('all');
 });
