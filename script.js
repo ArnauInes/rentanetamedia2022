@@ -41,7 +41,7 @@ function formatNumberWithThousandsSeparator(number) {
 }
 
 function formatNumberWithCommaSeparator(number) {
-  return number.toFixed(2) // Ensure two decimal places
+  return number.toFixed(1) // Ensure two decimal places
     .replace(/\B(?=(\d{3})+(?!\d))/g, ".") // Add thousand separators
     .replace(".", ","); // Convert decimal point to comma
 }
@@ -65,7 +65,7 @@ function updatePopupContent(features, lngLat) {
   <h3>${properties.NMUN} (${properties.NPRO})</h3> 
   <h4> Distrito: ${properties.CDIS} | Sección: ${properties.CSEC} </h4>
   <hr>
-  <p> Renda neta media anual por persona en 2022: <b>${formatNumberWithThousandsSeparator(properties["2022"])}€ </b> (<b>${formatDifValue(formatNumberWithThousandsSeparator(properties["diferencia_2021"]))}€</b> respecto al 2021 y <b>${formatDifValue(formatNumberWithCommaSeparator(properties["increment_percentatge_5_anys"]))}%</b> respecto 5 años atrás) </p>
+  <p> Renta neta media anual por persona en 2022: <b>${formatNumberWithThousandsSeparator(properties["2022"])}€ </b> (<b>${formatDifValue(formatNumberWithThousandsSeparator(properties["diferencia_2021"]))}€</b> respecto al 2021 y <b>${formatDifValue(formatNumberWithCommaSeparator(properties["increment_percentatge_5_anys"]))}%</b> respecto 5 años atrás) </p>
   `;
 
   new mapboxgl.Popup()
