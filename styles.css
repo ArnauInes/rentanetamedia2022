@@ -66,6 +66,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px; /* Optional: Adjust font size */
   line-height: 1.6; /* Optional: Improve readability */
+  min-width: 300px; /* Adjust the minimum width */
+  max-width: 500px; /* Adjust the maximum width */
+  padding: 15px; /* Optional: Add padding for better spacing */
+  border-radius: 8px; /* Optional: Slightly round the corners */
 }
 
 
@@ -93,5 +97,15 @@ body {
 
   .info-box p {
     font-size: 8px;
+  }
+
+  .mapboxgl-popup-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8px; /* Optional: Adjust font size */
+    line-height: 1.6; /* Optional: Improve readability */
+    min-width: 200px; /* Adjust the minimum width */
+    max-width: 500px; /* Adjust the maximum width */
+    padding: 15px; /* Optional: Add padding for better spacing */
+    border-radius: 8px; /* Optional: Slightly round the corners */
   }
 }
