@@ -152,3 +152,21 @@ document.addEventListener('DOMContentLoaded', () => {
 map.on('load', () => {
   updateMapFilter('all');
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const resetButton = document.getElementById("reset-map-button");
+  
+  if (resetButton) {
+    resetButton.addEventListener("click", function () {
+      console.log("Botón de reset clicado"); // Depuración
+      map.flyTo({
+        center: [-6.916, 35.945],
+        zoom: 4.53
+      });
+    });
+  } else {
+    console.error("No se encontró el botón de reset");
+  }
+});
+
+
